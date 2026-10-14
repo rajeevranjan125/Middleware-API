@@ -35,6 +35,6 @@ public class MiddlewareController {
         }
         return ResponseEntity
                 .status(HttpStatus.BAD_GATEWAY)
-                .body("Downstream api is down");
+                .body("Downstream api is down completely");
     }
 }
