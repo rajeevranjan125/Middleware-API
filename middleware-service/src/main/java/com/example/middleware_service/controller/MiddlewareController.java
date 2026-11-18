@@ -1,5 +1,6 @@
 package com.example.middleware_service.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +25,7 @@ public class MiddlewareController {
 
         try {
             String response = restClient.get()
-                    .uri("http://localhost:8080/internal/products/" + id)
+                    .uri("/internal/products/" + id)
                     .retrieve()
                     .body(String.class);
 
